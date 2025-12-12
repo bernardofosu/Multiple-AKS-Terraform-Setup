@@ -6,7 +6,7 @@ This setup converts your **single AKS Terraform code** into a **professional, re
 
 ## 🧱 Project Structure (Industry Standard)
 
-```
+```sh
 aks-terraform/
 │
 ├── modules/
@@ -132,6 +132,31 @@ location            = "West Europe"
 kubernetes_version  = "1.32.9"
 node_vm_size        = "Standard_D2s_v6"
 node_count          = 2
+```
+
+### 📄 `environments/dev/variables.tf`
+
+```hcl
+variable "location" {
+  type = string
+}
+
+variable "kubernetes_version" {
+  type = string
+}
+
+variable "node_vm_size" {
+  type = string
+}
+
+variable "node_count" {
+  type = number
+}
+
+variable "service_principal_app_id" {}
+variable "service_principal_client_secret" {
+  sensitive = true
+}
 ```
 
 ---
