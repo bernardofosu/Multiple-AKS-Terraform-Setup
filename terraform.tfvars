@@ -7,4 +7,4 @@ dev_node_count   = 2
 
 # PROD
 prod_node_vm_size = "Standard_D4s_v6"
-prod_node_count  = 3
+prod_node_count  = 2
